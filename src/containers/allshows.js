@@ -9,7 +9,7 @@ class Allshows extends Component{
     componentDidMount(){
         const allshows = {}
         const {imgs} = this.state
-        axios.get('http://localhost:8000/show')
+        axios.get('https://tvmovielistapi.herokuapp.com/show')
         .then(response=>{
             response.data.forEach(show=>{
                 const {title,username,img_url,user_id} = show

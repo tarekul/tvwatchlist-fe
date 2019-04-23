@@ -14,13 +14,13 @@ class Show extends Component{
 
     componentDidMount(){
         const {id} = this.props.match.params
-        axios.get(`http://localhost:8000/show/${id}`)
+        axios.get(`https://tvmovielistapi.herokuapp.com/show/${id}`)
         .then(response=>{
             const {title,img_url,genre_name,user_id} = response.data
             this.setState({title,img_url,genre_name,show_id:id,user_id})
         })
         
-        axios.get(`http://localhost:8000/comment/${id}`)
+        axios.get(`https://tvmovielistapi.herokuapp.com/comment/${id}`)
         .then(response=>{
             console.log(response.data)
             this.setState({comments:response.data})

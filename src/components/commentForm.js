@@ -19,7 +19,7 @@ class Commentform extends Component{
             comment_list.push(comment)
             const {show_id,user_id} = this.props
             this.setState({showComment:true,comment_list})
-            axios.post(`http://localhost:8000/comment`,{
+            axios.post(`https://tvmovielistapi.herokuapp.com/comment`,{
                 user_id:user_id,
                 show_id:show_id,
                 comment_body:comment

@@ -35,7 +35,7 @@ class App extends Component {
     else{
       axios({
         method:'GET',
-        url:'http://localhost:8000/user'
+        url:'https://tvmovielistapi.herokuapp.com/user'
       })
       .then(response=>{
         this.setState({users:response.data},()=>console.log(this.state))

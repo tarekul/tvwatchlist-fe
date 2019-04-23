@@ -11,10 +11,10 @@ class Profile extends Component{
     componentDidMount(){
         const {user_id} = this.props.match.params
         console.log('user_id',user_id)
-        axios.get(`http://localhost:8000/user/${user_id}`)
+        axios.get(`https://tvmovielistapi.herokuapp.com/user/${user_id}`)
         .then(response=>this.setState({username:response.data.username}))
         
-        axios.get(`http://localhost:8000/show/${user_id}/user`)
+        axios.get(`https://tvmovielistapi.herokuapp.com/show/${user_id}/user`)
         .then(response=>{
             this.setState({shows:response.data})
         })

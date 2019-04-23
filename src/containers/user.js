@@ -9,7 +9,7 @@ class Users extends Component{
         users:null
     }
     componentDidMount(){
-        axios.get('http://localhost:8000/user/')
+        axios.get('https://tvmovielistapi.herokuapp.com/user/')
         .then(response=>{
             this.setState({users:response.data})
         })

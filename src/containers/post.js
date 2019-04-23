@@ -23,7 +23,7 @@ class Post extends Component{
             const {user_id} = this.props
             //console.log(user_id)
             this.setState({error:false},()=>{
-                axios.post('http://localhost:8000/show',{
+                axios.post('https://tvmovielistapi.herokuapp.com/show',{
                     title:title,
                     img_url:img_url,
                     genre_id:genre_id,
